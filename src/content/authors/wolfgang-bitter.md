@@ -2,7 +2,7 @@
 title: Wolfgang Bitter
 institute: "Technische Informationsbibliothek (TIB)"
 email: wolfgang.bitter@tib.eu
-image: "images/wolfgang_bitter_squared.png"
+image: "/images/wolfgang_bitter_squared.png"
 description: Wolfgang Bitter
 social:
   - name: home
