@@ -3,7 +3,7 @@
 banner:
   title: "KI in Museen (KiM)"
   content: "Wie KI die Museen von morgen gestaltet"
-  image: "/images/qwen-image-AImuseum_banner_small.png"
+  image: "/images/Gemini_Generated_Image_axub8zaxub8zaxub_4_3.png"
   button:
     enable: false
     label: "Get Started For Free"
@@ -46,11 +46,12 @@ features:
       link: ""
 
   - title: "Betriebsmodelle für die Praxis"
-    image: "/images/service-1.png"
-    content: "Langfristig sollen die neuen Werkzeuge nicht im Labor bleiben, sondern ihren Weg in den Museumsalltag finden. Dazu braucht es tragfähige Konzepte für Technik und Organisation. Getestet wird dies unter anderem auf der KI-Plattform CoSAIR der Jade Hochschule."
+    image: "/images/ap4.jpg"
+    content: "Langfristig sollen die neuen Werkzeuge nicht im Labor bleiben, sondern ihren Weg in den Museumsalltag finden. Dieser Transfer erfordert tragfähige technische und organisatorische Konzepte, die Stabilität und Nutzen garantieren. Das IAPG arbeitet gemeinsam mit einem Unterauftragnehmer daran, die Brücke zwischen Entwicklung und Produktivumgebung zu schlagen. Ein zentraler Baustein ist dabei die KI-Plattform CoSAIR der Jade Hochschule, auf der die Systeme unter realistischen Bedingungen getestet und optimiert werden."
     bulletpoints:
-      - "Stichwort 1"
-      - "Stichwort 2"
+      - "Forschungsumgebung für KI-Modelle"
+      - "Produktivumgebung für KI-Modelle"
+      - Nutzbare KI
     button:
       enable: false
       label: "Get Started Now"
@@ -64,6 +65,7 @@ Gefördert wird das Vorhaben mit rund 2,25 Millionen Euro vom Niedersächsischen
 ### Projektziele
 
 Das Forschungsprojekt gliedert sich in vier Arbeitspakete, die jeweils unterschiedliche Herausforderungen im Museumsbereich aufgreifen. 
+
 
 1. [**Provenienzforschung**](#provenienzforschung)
 2. [**Digitale Erschließung**](#digitale-erschließung)
