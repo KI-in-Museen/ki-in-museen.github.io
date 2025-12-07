@@ -1,6 +1,6 @@
 ---
 title: Sascha Koch
-institute: "Jade Hochschule"
+institute: "Institut für Angewandte Photogrammetrie und Geoinformatik (IAPG) - Jade Hochschule"
 email: sascha.koch@jade-hs.de
 image: "/images/sascha-koch.jpg"
 description: this is meta description
