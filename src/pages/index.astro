@@ -128,11 +128,14 @@ const { banner, features } = homepage.data as Homepage;
                 </li>
               ))}
             </ul>
-            {feature.button.enable && (
+            <div>
+              <span class="pr-4 font-bold">Beteiligte Partner:</span>
+              {feature.button.enable && (
               <a class="btn btn-primary mt-5" href={feature.button.link}>
                 {feature.button.label}
               </a>
             )}
+            </div>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 ---
 title: "Verbundzentrale des GBV (VZG)"
+link: vzg
 logo: "/images/vzg.svg"
 description: "Die Verbundzentrale des GBV (VZG) mit Sitz in Göttingen ist als niedersächsischer Landesbetrieb das zentrale Dienstleistungszentrum für Bibliotheken und Forschungseinrichtungen in mehreren Bundesländern. Ihre Abteilung Digitale Bibliothek entwickelt und betreibt die technische Infrastruktur für die dauerhafte Archivierung und den standardisierten Nachweis von digitalen Sammlungen und wissenschaftlichen Ressourcen. Durch die Bereitstellung von Plattformen wie Kulturerbe Niedersachsen und dem Museums-Management-System kuniweb schafft die VZG die notwendige technologische Basis, um wertvolle kulturelle Daten für Forschung und Öffentlichkeit digital zugänglich zu machen und deren Nutzbarkeit in innovativen KI-Anwendungen zu gewährleisten."
 ---

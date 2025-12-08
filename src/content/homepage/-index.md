@@ -24,15 +24,15 @@ features:
 
   - title: "Digitale Erschließung"
     image: "/images/service-2.png"
-    content: "Einige Sammlungen wurden bislang nur in kleinen Teilen durch intensiven manuellen Aufwand erfasst. Mit aktuellen KI-Methoden sollen Bilder und Artefakte automatisch kategorisieren und beschrieben werdeb. Kombiniert mit effizienten Such- und Visualisierungsmethoden ermöglichen diese Ansätze Fachleuten eine schnelle Überprüfung und Validierung der Vorschläge. Dies ermöglicht eine systematische Erschließung großer Bestände und verbessert die Durchsuchbarkeit und Exploration von Museumsdaten."
+    content: "Einige Sammlungen wurden bislang nur in kleinen Teilen durch intensiven manuellen Aufwand erfasst. Mit aktuellen KI-Methoden sollen Bilder und Artefakte automatisch kategorisieren und beschrieben werden. Kombiniert mit effizienten Such- und Visualisierungsmethoden ermöglichen diese Ansätze Fachleuten eine schnelle Überprüfung und Validierung der Vorschläge. Dies ermöglicht eine systematische Erschließung großer Bestände und verbessert die Durchsuchbarkeit und Exploration von Museumsdaten."
     bulletpoints:
       - "KI-Methoden zur digitalen Erschließung von Museumbeständen"
       - "Effiziente Such- und Visualisierungsmethoden"
       - "Systematische Erschließung, Durchsuchbarkeit und Exploration von Museumsdaten"
     button:
-      enable: false
-      label: "Mehr"
-      link: "https://github.com/zeon-studio/astroplate"
+      enable: true
+      label: "TIB"
+      link: "team#tib"
 
   - title: "Anreicherung von Metadaten"
     image: "/images/service-3.png"

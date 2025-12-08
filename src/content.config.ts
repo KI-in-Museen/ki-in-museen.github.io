@@ -47,6 +47,7 @@ const institutesCollection = defineCollection({
   loader: glob({ pattern: "**/*.{md,mdx}", base: "src/content/institutes" }),
   schema: z.object({
     title: z.string(),
+    link: z.string(),
     logo: z.string().optional(),
     description: z.string().optional(),
   }),

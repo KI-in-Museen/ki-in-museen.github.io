@@ -60,7 +60,7 @@ const authorsByInstitute = institutes.reduce((acc: AuthorsByInstitute, institute
                   <img src={institute.logo} alt={`${institute.title} Logo`} class="h-12 mr-4" />
                 )}
                 <div>
-                  <h2>{institute.title}</h2>
+                  <h2 id={institute.link}>{institute.title}</h2>
                 </div>
               </div>
             </div>
