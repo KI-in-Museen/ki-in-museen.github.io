@@ -1,9 +1,9 @@
 ---
 # Banner
 banner:
-  title: "KI in Museen (KiM)"
+  title: "KI in Museen"
   content: "Wie KI die Museen von morgen gestaltet"
-  image: "/images/Gemini_Generated_Image_axub8zaxub8zaxub_4_3.png"
+  image: "/images/banner-museum.webp"
   button:
     enable: false
     label: "Get Started For Free"
@@ -21,6 +21,13 @@ features:
       enable: false
       label: "Get Started Now"
       link: "#"
+    partners:
+      - name: "Leuphana"
+        logo: ""
+        link: "team#leuphana"
+      - name: "Jade"
+        logo: ""
+        link: "team#jade"
 
   - title: "Digitale Erschließung"
     image: "/images/service-2.png"
@@ -30,9 +37,13 @@ features:
       - "Effiziente Such- und Visualisierungsmethoden"
       - "Systematische Erschließung, Durchsuchbarkeit und Exploration von Museumsdaten"
     button:
-      enable: true
+      enable: false
       label: "TIB"
       link: "team#tib"
+    partners:
+      - name: "TIB"
+        logo: ""
+        link: "team#tib"
 
   - title: "Anreicherung von Metadaten"
     image: "/images/service-3.png"
@@ -44,6 +55,13 @@ features:
       enable: false
       label: ""
       link: ""
+    partners:
+      - name: "Uni Göttingen"
+        logo: ""
+        link: "team#unig"
+      - name: "VZG"
+        logo: ""
+        link: "team#vzg"
 
   - title: "Betriebsmodelle für die Praxis"
     image: "/images/ap4.jpg"
@@ -51,11 +69,15 @@ features:
     bulletpoints:
       - "Forschungsumgebung für KI-Modelle"
       - "Produktivumgebung für KI-Modelle"
-      - Nutzbare KI
+      - "Nutzbare KI"
     button:
       enable: false
       label: "Get Started Now"
       link: "#"
+    partners:
+      - name: "Jade"
+        logo: ""
+        link: "team#jade"
 ---
 
 Museen bewahren nicht nur wertvolle Objekte, sie sind auch Orte des Wissens. Doch ein Großteil dieses Wissens bleibt bislang im Verborgenen: Viele Sammlungen sind nur unvollständig dokumentiert, Herkunftsgeschichten sind schwer nachzuvollziehen und die vorhandenen Daten sind häufig nicht miteinander verknüpft. Mithilfe von Künstlicher Intelligenz (KI) soll die Erschließung, Analyse und Präsentation von Museumsdaten in den kommenden zwei Jahren Forschungsprojekt **KI in Museen** entscheidend vorangebracht werden.

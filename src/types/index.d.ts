@@ -4,6 +4,13 @@ export type Feature = {
   bulletpoints: string[];
   content: string;
   title: string;
+  partners: partner
+};
+
+export type partner = {
+  name: string;
+  logo: string;
+  link: string;
 };
 
 export type Button = {

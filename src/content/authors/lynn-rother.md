@@ -1,6 +1,6 @@
 ---
 title: Lynn Rother
-institute: "Leuphana University Lüneburg"
+institute: "Leuphana Universität Lüneburg"
 email: lynn.rother@leuphana.de
 image: "/images/lynn-rother.jpg"
 description: this is meta description

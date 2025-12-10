@@ -4,6 +4,7 @@ import Base from "@/layouts/Base.astro";
 import { markdownify } from "@/lib/utils/textConverter";
 import CallToAction from "@/partials/CallToAction.astro";
 import Testimonial from "@/partials/Testimonial.astro";
+import PageHeader from "@/partials/PageHeader.astro";
 import type { Button, Feature } from "@/types";
 import type { CollectionEntry } from "astro:content";
 import { getEntry, render } from "astro:content";
@@ -42,37 +43,24 @@ const { banner, features } = homepage.data as Homepage;
 
 <Base>
   <!-- Banner -->
-  <section class="section pt-14 pb-0">
+  <section class="section pt-0 pb-0">
     <div class="container">
-      <div class="row justify-center">
-        <div class="lg:col-7 md:col-9 mb-2 text-center">
+      <div class="row justify-center text-center">
+        <div class="rounded-2xl bg-gradient-to-b from-body to-light px-8 py-14 dark:from-darkmode-body dark:to-darkmode-light">
           <h1
             set:html={markdownify(banner.title)}
             class="mb-4 text-h3 lg:text-h1"
           />
-          <p set:html={markdownify(banner.content)} class="mb-8" />
-          {
-            banner.button.enable && (
-              <a
-                class="btn btn-primary"
-                href={banner.button.link}
-                target={
-                  banner.button.link.startsWith("http") ? "_blank" : "_self"
-                }
-                rel="noopener"
-              >
-                {banner.button.label}
-              </a>
-            )
-          }
+          <p set:html={markdownify(banner.content)} class="mb-8 italic" />
         </div>
         {
           banner.image && (
-            <div class="col-12">
+            <div class="col-12 pt-4">
               <ImageMod
                 src={banner.image}
                 height={380}
                 width={1200}
+                class="object-cover m-auto h-180 rounded-2xl"
                 alt="banner"
                 format="webp"
               />
@@ -87,7 +75,7 @@ const { banner, features } = homepage.data as Homepage;
   <!-- Content -->
   <div class="container pt-8">
     <div class="row justify-center">
-      <div class="md:col-10 lg:col-7">
+      <div class="md:col-10 lg:col-10">
         <div class="content">
           <Content />
         </div>
@@ -128,13 +116,19 @@ const { banner, features } = homepage.data as Homepage;
                 </li>
               ))}
             </ul>
-            <div>
-              <span class="pr-4 font-bold">Beteiligte Partner:</span>
-              {feature.button.enable && (
+            {feature.button.enable && (
               <a class="btn btn-primary mt-5" href={feature.button.link}>
                 {feature.button.label}
               </a>
             )}
+            <div>
+              <span class="font-bold">Beteiligte Partner:</span>
+              {feature.partners.map((partner) => (
+                <a class="btn btn-primary mt-5 ml-2" href={partner.link}>
+                {partner.name}
+                </a>
+                ))
+              }  
             </div>
           </div>
         </div>

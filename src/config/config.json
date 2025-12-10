@@ -1,20 +1,20 @@
 {
   "site": {
     "title": "KI in Museen",
-    "base_url": "https://ki-in-museen.github.io",
+    "base_url": "https://ki-in-museen.de",
     "base_path": "/",
     "trailing_slash": false,
-    "favicon": "images/favicon.png",
-    "logo": "",
-    "logo_darkmode": "",
-    "logo_width": "150",
-    "logo_height": "30",
+    "favicon": "/images/favicon.webp",
+    "logo": "/images/kim-dark.webp",
+    "logo_darkmode": "/images/kim.webp",
+    "logo_width": "69",
+    "logo_height": "40",
     "logo_text": "KI in Museen"
   },
   "settings": {
     "search": true,
     "sticky_header": true,
-    "theme_switcher": true,
+    "theme_switcher": false,
     "default_theme": "system",
     "pagination": 2,
     "summary_length": 200,

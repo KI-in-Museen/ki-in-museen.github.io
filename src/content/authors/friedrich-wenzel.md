@@ -2,7 +2,7 @@
 title: Friedrich Wenzel
 institute: "Institut für Angewandte Photogrammetrie und Geoinformatik (IAPG) - Jade Hochschule"
 email: friedrich.wenzel@jade-hs.de
-image: "/images/image-placeholder.png"
+image: "/images/avatar.png"
 description: this is meta descriptiong
 social:
   - name: home

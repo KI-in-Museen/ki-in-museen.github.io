@@ -114,6 +114,13 @@ const homepageCollection = defineCollection({
           label: z.string(),
           link: z.string(),
         }),
+        partners: z.array(
+          z.object({
+            name: z.string(),
+            logo: z.string(),
+            link: z.string(),
+          }),
+        ),
       }),
     ),
   }),
