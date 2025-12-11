@@ -14,6 +14,10 @@ import { AstroFont } from "astro-font";
 import { ClientRouter } from "astro:transitions";
 import SearchModal from "./helpers/SearchModal";
 
+// NEU (hinzufügen):
+import AuthGuard from "@/components/AuthGuard"; 
+import { SignedIn, SignedOut } from '@clerk/astro/react';
+
 // font families
 const pf = theme.fonts.font_family.primary;
 const sf = theme.fonts.font_family.secondary;
@@ -181,19 +185,22 @@ const { title, meta_title, description, image, noindex, canonical } =
     <meta name="twitter:card" content="summary_large_image" />
   </head>
   <body>
-    {/* google tag manager noscript */}
-    {
-      config.google_tag_manager.enable && (
-        <GoogleTagmanagerNoscript id={config.google_tag_manager.gtm_id} />
-      )
-    }
+    <AuthGuard client:only="react" />
 
-    <TwSizeIndicator />
-    <Header />
-    <SearchModal client:load />
-    <main id="main-content">
-      <slot />
-    </main>
-    <Footer />
-  </body>
+    <SignedIn client:only="react">
+      {/* google tag manager noscript */}
+      {
+        config.google_tag_manager.enable && (
+          <GoogleTagmanagerNoscript id={config.google_tag_manager.gtm_id} />
+        )
+      }
+
+      <TwSizeIndicator />
+      <Header />
+      <SearchModal client:load />
+      <main id="main-content">
+        <slot />
+      </main>
+      <Footer />
+    </SignedIn>
 </html>
