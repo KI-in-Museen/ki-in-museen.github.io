@@ -1,6 +1,7 @@
 ---
 title: Bela Gipp
 institute: "Georg-August-Universität Göttingen"
+id: 1
 email: gipp@uni-goettingen.de
 image: "/images/bela-gipp.jpg"
 description: this is meta description

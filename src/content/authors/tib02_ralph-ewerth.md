@@ -1,6 +1,7 @@
 ---
 title: Ralph Ewerth
 institute: "Technische Informationsbibliothek (TIB)"
+id: 2
 email: ralph.ewerth@tib.eu
 image: "/images/ralph-ewerth.png"
 description: Prof. Ralph Ewerth
@@ -16,4 +17,4 @@ social:
     link: https://www.linkedin.com/in/drewerth/
 ---
 
-Group Leader of the Research Group Visual Analytics
+Gruppenleiter der Forschungsgruppe Visual Analytics

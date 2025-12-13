@@ -1,6 +1,7 @@
 ---
 title: Frank Dührkohp
 institute: "Verbundzentrale des GBV (VZG)"
+id: 1
 email: frank.duehrkohp@gbv.de
 image: "/images/frank-duehrkohp.jpg"
 description: this is meta description

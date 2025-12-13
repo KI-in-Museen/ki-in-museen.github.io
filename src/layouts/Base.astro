@@ -188,10 +188,10 @@ const isDev = import.meta.env.DEV;
     <meta name="twitter:card" content="summary_large_image" />
   </head>
   <body>
-    <AuthGuard client:only="react" />
 
     {
       isProd && (
+        <AuthGuard client:only="react" />
         <SignedIn client:only="react">
           {/* google tag manager noscript */}
           {config.google_tag_manager.enable && (

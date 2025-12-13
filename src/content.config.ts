@@ -7,6 +7,7 @@ const blogCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     meta_title: z.string().optional(),
+    abstract: z.string().optional(),
     description: z.string().optional(),
     date: z.date().optional(),
     image: z.string().optional(),
@@ -22,7 +23,8 @@ const authorsCollection = defineCollection({
   loader: glob({ pattern: "**/*.{md,mdx}", base: "src/content/authors" }),
   schema: z.object({
     title: z.string(),
-    institute: z.string().optional(), // Ensure this field is included
+    institute: z.string(),
+    id: z.number(),
     meta_title: z.string().optional(),
     email: z.string().optional(),
     image: z.string().optional(),

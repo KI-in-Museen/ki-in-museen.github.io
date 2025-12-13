@@ -1,6 +1,7 @@
 ---
 title: Fokko Mittelstaedt
-institute: "Institut für Angewandte Photogrammetrie und Geoinformatik (IAPG) - Jade Hochschule"
+institute: "Jade Hochschule"
+id: 2
 email: fokko.mittelstaedt@jade-hs.de
 image: "/images/fokko-mittelstaedt.png"
 description: this is meta descriptiong

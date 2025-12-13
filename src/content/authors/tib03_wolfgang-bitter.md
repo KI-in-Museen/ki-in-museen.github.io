@@ -1,6 +1,7 @@
 ---
 title: Wolfgang Bitter
 institute: "Technische Informationsbibliothek (TIB)"
+id: 3
 email: wolfgang.bitter@tib.eu
 image: "/images/wolfgang_bitter_squared.png"
 description: Wolfgang Bitter
@@ -16,4 +17,4 @@ social:
     link: https://www.linkedin.com/in/wolfgang-bitter/
 ---
 
-Research Assistant in the Research Group Visual Analytics
+Wissenschaftlicher Mitarbeiter im Bereich Data Science

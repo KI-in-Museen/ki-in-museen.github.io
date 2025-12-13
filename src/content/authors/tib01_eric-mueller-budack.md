@@ -1,6 +1,7 @@
 ---
 title: Eric Müller-Budack
 institute: "Technische Informationsbibliothek (TIB)"
+id: 1
 email: eric.mueller@tib.eu
 image: "/images/eric_mueller-budack.webp"
 description: Dr. Eric Müller-Budack
@@ -16,4 +17,4 @@ social:
     link: https://linkedin.com/in/eric-mb
 ---
 
-Group Leader of the Research Group Visual Analytics
+Gruppenleiter der Forschungsgruppe Visual Analytics

@@ -1,7 +1,7 @@
 ---
-title: "Institut für Angewandte Photogrammetrie und Geoinformatik (IAPG) - Jade Hochschule"
+title: "Jade Hochschule"
 link: jade
-logo: "/images/jade.png"
+logo: "/images/logo-jade.jpg"
 description: "Das zur Abteilung Geoinformation der Jade Hochschule gehörende Institut für Angewandte Photogrammetrie und Geoinformatik (IAPG) beschäftigt sich mit der anwendungsbezogenen Lehre, Forschung und Entwicklung in den Bereichen Photogrammetrie und Geoinformatik. Das Institut baut dabei auf erfolgreich durchgeführten Projekten und existierenden Kontakten zu kooperierenden Hochschulen, Behörden und Wirtschaftsunternehmen auf. In fünf Arbeitsgruppen werden lehr- und forschungsrelevante Themen bearbeitet.
 
 Im Bereich Photogrammetrie steht die 3D-Datenerfassung, -verarbeitung und -visualisierung aus bildgebenden Sensoren im Fokus.

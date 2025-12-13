@@ -1,5 +1,6 @@
 ---
 title: "Pressemitteilung: Wie KI die Museen von morgen gestaltet"
+abstract: "Foobar bar foo" 
 meta_title: "KI in Museen"
 description: "this is meta description"
 date: 2025-09-16

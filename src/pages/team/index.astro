@@ -9,74 +9,89 @@ const COLLECTION_FOLDER = "authors";
 
 const authorIndex = (await getEntry(
   COLLECTION_FOLDER,
-  "-index"
+  "-index",
 )) as CollectionEntry<"authors">;
 const authors = await getSinglePage(COLLECTION_FOLDER);
 const institutes = await getInstitutes();
 
+// Sort authors alphabetically by name
+const sortedAuthors = authors.sort((a, b) => a.data.id - b.data.id);
+
 // Define the type for authorsByInstitute
 type AuthorsByInstitute = {
-  [key: string]: typeof authors;
+  [key: string]: typeof sortedAuthors;
 };
 
-const authorsByInstitute = institutes.reduce((acc: AuthorsByInstitute, institute) => {
-  acc[institute.title] = authors.filter(author => author.data.institute === institute.title);
-  return acc;
-}, {});
-
+const authorsByInstitute = institutes.reduce(
+  (acc: AuthorsByInstitute, institute) => {
+    acc[institute.title] = authors.filter(
+      (author) => author.data.institute === institute.title,
+    );
+    return acc;
+  },
+  {},
+);
 ---
 
 <Base title={authorIndex.data.title}>
   <PageHeader title={authorIndex.data.title} />
-  {Object.entries(authorsByInstitute).map(([instituteName, authors]) => {
-    const institute = institutes.find(institute => institute.title === instituteName);
-    if (!institute) {
-      // Handle the case where the institute is not found
+  {
+    Object.entries(authorsByInstitute).map(([instituteName, authors]) => {
+      const institute = institutes.find(
+        (institute) => institute.title === instituteName,
+      );
+      if (!institute) {
+        // Handle the case where the institute is not found
+        return (
+          <section class="section-sm pb-0">
+            <div class="container">
+              <div class="row justify-center">
+                <div class="mb-14 md:col-12 lg:col-12">
+                  <h2>Institute Not Found</h2>
+                  <p>No information available for this institute.</p>
+                </div>
+                {authors.map((author) => (
+                  <div class="mb-14 md:col-6 lg:col-4">
+                    <AuthorCard data={author} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        );
+      }
       return (
         <section class="section-sm pb-0">
           <div class="container">
             <div class="row justify-center">
-              <div class="mb-14 md:col-12 lg:col-12">
-                <h2>Institute Not Found</h2>
-                <p>No information available for this institute.</p>
-              </div>
-              {authors.map((author) => (
-                <div class="mb-14 md:col-6 lg:col-4">
-                  <AuthorCard data={author} />
+              <div class="mb-4 md:col-12 lg:col-12">
+                <div class="flex items-center">
+                  {institute.logo && (
+                    <img
+                      src={institute.logo}
+                      alt={`${institute.title} Logo`}
+                      class="h-12 mr-4"
+                    />
+                  )}
+                  <div>
+                    <h2 id={institute.link}>{institute.title}</h2>
+                  </div>
                 </div>
-              ))}
+              </div>
+              <div class="mb-8 md:col-12 lg:col-12">
+                <p>{institute.description}</p>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {authors.map((author) => (
+                  <div class="mb-8">
+                    <AuthorCard data={author} />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
       );
-    }
-    return (
-      <section class="section-sm pb-0">
-        <div class="container">
-          <div class="row justify-center">
-            <div class="mb-4 md:col-12 lg:col-12">
-              <div class="flex items-center">
-                {institute.logo && (
-                  <img src={institute.logo} alt={`${institute.title} Logo`} class="h-12 mr-4" />
-                )}
-                <div>
-                  <h2 id={institute.link}>{institute.title}</h2>
-                </div>
-              </div>
-            </div>
-            <div class="mb-8 md:col-12 lg:col-12">
-              <p>{institute.description}</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {authors.map((author) => (
-                <div class="mb-8">
-                  <AuthorCard data={author} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-    );
-  })}
+    })
+  }
 </Base>
