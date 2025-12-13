@@ -70,7 +70,10 @@ const { banner, features } = homepage.data as Homepage;
                 rel="noopener"
               >
                 {banner.button.label}
-                <DynamicIcon className="inline-block" icon="FaArrowDown" />
+                <DynamicIcon
+                  className="inline-block animate-bounce"
+                  icon="FaArrowDown"
+                />
               </a>
             )
           }
