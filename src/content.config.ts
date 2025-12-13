@@ -13,6 +13,7 @@ const blogCollection = defineCollection({
     image: z.string().optional(),
     author: z.string().default("Admin"),
     categories: z.array(z.string()).default(["others"]),
+    years: z.array(z.string()).default(["others"]),
     tags: z.array(z.string()).default(["others"]),
     draft: z.boolean().optional(),
   }),

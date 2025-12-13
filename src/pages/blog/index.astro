@@ -18,9 +18,8 @@ const postIndex = (await getEntry(
   "-index",
 )) as CollectionEntry<"blog">;
 const posts = await getSinglePage(BLOG_FOLDER);
-const allCategories = await getAllTaxonomy(BLOG_FOLDER, "categories");
-const categories = await getTaxonomy(BLOG_FOLDER, "categories");
 const tags = await getTaxonomy(BLOG_FOLDER, "tags");
+const years = await getTaxonomy(BLOG_FOLDER, "years");
 const sortedPosts = sortByDate(posts);
 const totalPages: number = Math.ceil(posts.length / config.settings.pagination);
 const currentPosts = sortedPosts.slice(0, config.settings.pagination);
@@ -54,11 +53,7 @@ const currentPosts = sortedPosts.slice(0, config.settings.pagination);
         </div>
 
         <!-- sidebar -->
-        <PostSidebar
-          categories={categories}
-          tags={tags}
-          allCategories={allCategories}
-        />
+        <PostSidebar years={years} tags={tags} />
       </div>
     </div>
   </section></Base

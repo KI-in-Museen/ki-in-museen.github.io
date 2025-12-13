@@ -4,8 +4,8 @@ abstract: "Museen bewahren nicht nur wertvolle Objekte, sie sind auch Orte des W
 meta_title: "KI in Museen"
 description: "this is meta description"
 date: 2025-09-16
+years: ["2025"]
 image: "/images/qwen-image-AImuseum_banner_small.png"
-categories: ["News"]
 author: "Sascha Koch"
 tags: ["News", "Pressemitteilung"]
 draft: false

@@ -1,0 +1,45 @@
+---
+import BlogCard from "@/components/BlogCard.astro";
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import { getTaxonomy } from "@/lib/taxonomyParser.astro";
+import { sortByDate } from "@/lib/utils/sortFunctions";
+import taxonomyFilter from "@/lib/utils/taxonomyFilter";
+import PageHeader from "@/partials/PageHeader.astro";
+
+export async function getStaticPaths() {
+  const BLOG_FOLDER = "blog";
+  const years = await getTaxonomy(BLOG_FOLDER, "years");
+
+  return years.map((year) => {
+    return {
+      params: { year },
+    };
+  });
+}
+
+const { year } = Astro.params;
+
+// get posts by tag
+const BLOG_FOLDER = "blog";
+const posts = await getSinglePage(BLOG_FOLDER);
+const filterByTags = taxonomyFilter(posts, "years", year!);
+const sortedPosts = sortByDate(filterByTags);
+---
+
+<Base title={year}>
+  <PageHeader title={year} />
+  <div class="section-sm pb-0">
+    <div class="container">
+      <div class="row">
+        {
+          sortedPosts.map((post) => (
+            <div class="mb-14 md:col-6 lg:col-4">
+              <BlogCard data={post} />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</Base>

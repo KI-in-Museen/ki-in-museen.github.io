@@ -1,27 +1,24 @@
 ---
 import { humanize } from "@/lib/utils/textConverter";
 
-const { tags, categories, allCategories } = Astro.props;
+const { years, tags } = Astro.props;
 ---
 
 <div class="lg:col-4">
-  <!-- categories -->
-  <div class="mb-8">
-    <h5 class="mb-6">Categories</h5>
-    <div class="rounded bg-light p-8 dark:bg-darkmode-light">
-      <ul class="space-y-4">
+  <!-- dates -->
+  <!-- <div class="mb-8">
+    <h5 class="mb-6">Articles by Year</h5>
+    <div class="rounded bg-light p-6 dark:bg-darkmode-light">
+      <ul>
         {
-          categories.map((category: any) => {
-            const count = allCategories.filter(
-              (c: any) => c === category
-            ).length;
+          years.map((date: any) => {
             return (
-              <li>
+              <li class="inline-block">
                 <a
-                  class="flex justify-between hover:text-primary dark:hover:text-darkmode-primary"
-                  href={`/categories/${category}`}
+                  class="m-1 block rounded bg-white px-3 py-1 hover:bg-primary hover:text-white dark:bg-darkmode-body dark:hover:bg-darkmode-primary dark:hover:text-text-dark"
+                  href={`/year/${date}`}
                 >
-                  {humanize(category)} <span>({count})</span>
+                  {humanize(date)}
                 </a>
               </li>
             );
@@ -29,7 +26,7 @@ const { tags, categories, allCategories } = Astro.props;
         }
       </ul>
     </div>
-  </div>
+  </div> -->
   <!-- tags -->
   <div class="mb-8">
     <h5 class="mb-6">Tags</h5>

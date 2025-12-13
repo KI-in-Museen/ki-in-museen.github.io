@@ -16,11 +16,11 @@ const BLOG_FOLDER = "blog";
 const { slug } = Astro.params;
 const postIndex = (await getEntry(
   BLOG_FOLDER,
-  "-index"
+  "-index",
 )) as CollectionEntry<"blog">;
 const posts = await getSinglePage(BLOG_FOLDER);
-const allCategories = await getAllTaxonomy(BLOG_FOLDER, "categories");
-const categories = await getTaxonomy(BLOG_FOLDER, "categories");
+// const allCategories = await getAllTaxonomy(BLOG_FOLDER, "years");
+const years = await getTaxonomy(BLOG_FOLDER, "years");
 const tags = await getTaxonomy(BLOG_FOLDER, "tags");
 const sortedPosts = sortByDate(posts);
 const totalPages = Math.ceil(posts.length / config.settings.pagination);
@@ -75,11 +75,7 @@ export async function getStaticPaths() {
         </div>
 
         <!-- sidebar -->
-        <PostSidebar
-          categories={categories}
-          tags={tags}
-          allCategories={allCategories}
-        />
+        <PostSidebar years={years} tags={tags} />
       </div>
     </div>
   </section>
