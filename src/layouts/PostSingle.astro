@@ -49,9 +49,9 @@ const { title, description, author, categories, image, date, tags } = post.data;
             <FaTags className={"mr-2 -mt-1 inline-block"} />
             {
               tags.map((tag: string, index: number) => (
-                <a href={`/categories/${slugify(tag)}`}>
+                <a href={`/tags/${slugify(tag)}`}>
                   {humanize(tag)}
-                  {index !== categories.length && ","}
+                  {index !== tags.length - 1 && ","}
                 </a>
               ))
             }
