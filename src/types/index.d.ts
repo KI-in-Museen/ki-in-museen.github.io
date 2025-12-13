@@ -4,7 +4,7 @@ export type Feature = {
   bulletpoints: string[];
   content: string;
   title: string;
-  partners: partner
+  partners: partner[];
 };
 
 export type partner = {

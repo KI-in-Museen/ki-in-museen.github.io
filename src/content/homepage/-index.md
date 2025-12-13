@@ -5,9 +5,9 @@ banner:
   content: "Wie KI die Museen von morgen gestaltet"
   image: "/images/banner-museum.webp"
   button:
-    enable: false
-    label: "Get Started For Free"
-    link: "https://github.com/zeon-studio/astroplate"
+    enable: true
+    label: "Mehr Erfahren"
+    link: "#content"
 
 # Features
 features:
