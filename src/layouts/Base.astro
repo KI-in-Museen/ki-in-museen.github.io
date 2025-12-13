@@ -15,8 +15,8 @@ import { ClientRouter } from "astro:transitions";
 import SearchModal from "./helpers/SearchModal";
 
 // NEU (hinzufügen):
-import AuthGuard from "@/components/AuthGuard"; 
-import { SignedIn, SignedOut } from '@clerk/astro/react';
+import AuthGuard from "@/components/AuthGuard";
+import { SignedIn, SignedOut } from "@clerk/astro/react";
 
 // font families
 const pf = theme.fonts.font_family.primary;
@@ -47,6 +47,9 @@ export interface Props {
 // destructure frontmatter
 const { title, meta_title, description, image, noindex, canonical } =
   Astro.props;
+
+const isProd = import.meta.env.PROD;
+const isDev = import.meta.env.DEV;
 ---
 
 <!doctype html>
@@ -121,7 +124,7 @@ const { title, meta_title, description, image, noindex, canonical } =
     <meta
       name="description"
       content={plainify(
-        description ? description : config.metadata.meta_description
+        description ? description : config.metadata.meta_description,
       )}
     />
 
@@ -134,7 +137,7 @@ const { title, meta_title, description, image, noindex, canonical } =
     <meta
       property="og:title"
       content={plainify(
-        meta_title ? meta_title : title ? title : config.site.title
+        meta_title ? meta_title : title ? title : config.site.title,
       )}
     />
 
@@ -142,7 +145,7 @@ const { title, meta_title, description, image, noindex, canonical } =
     <meta
       property="og:description"
       content={plainify(
-        description ? description : config.metadata.meta_description
+        description ? description : config.metadata.meta_description,
       )}
     />
     <meta property="og:type" content="website" />
@@ -155,7 +158,7 @@ const { title, meta_title, description, image, noindex, canonical } =
     <meta
       name="twitter:title"
       content={plainify(
-        meta_title ? meta_title : title ? title : config.site.title
+        meta_title ? meta_title : title ? title : config.site.title,
       )}
     />
 
@@ -163,7 +166,7 @@ const { title, meta_title, description, image, noindex, canonical } =
     <meta
       name="twitter:description"
       content={plainify(
-        description ? description : config.metadata.meta_description
+        description ? description : config.metadata.meta_description,
       )}
     />
 
@@ -187,20 +190,33 @@ const { title, meta_title, description, image, noindex, canonical } =
   <body>
     <AuthGuard client:only="react" />
 
-    <SignedIn client:only="react">
-      {/* google tag manager noscript */}
-      {
-        config.google_tag_manager.enable && (
-          <GoogleTagmanagerNoscript id={config.google_tag_manager.gtm_id} />
-        )
-      }
+    {
+      isProd && (
+        <SignedIn client:only="react">
+          {/* google tag manager noscript */}
+          {config.google_tag_manager.enable && (
+            <GoogleTagmanagerNoscript id={config.google_tag_manager.gtm_id} />
+          )}
 
-      <TwSizeIndicator />
-      <Header />
-      <SearchModal client:load />
-      <main id="main-content">
-        <slot />
-      </main>
-      <Footer />
-    </SignedIn>
+          <TwSizeIndicator />
+          <Header />
+          <SearchModal client:load />
+          <main id="main-content">
+            <slot />
+          </main>
+          <Footer />
+        </SignedIn>
+      )
+    }{
+      isDev && (
+        <TwSizeIndicator />
+        <Header />
+        <SearchModal client:load />
+        <main id="main-content">
+          <slot />
+        </main>
+        <Footer />
+      )
+    }
+  </body>
 </html>
