@@ -4,12 +4,13 @@ import Base from "@/layouts/Base.astro";
 import { markdownify } from "@/lib/utils/textConverter";
 import CallToAction from "@/partials/CallToAction.astro";
 import Testimonial from "@/partials/Testimonial.astro";
-import PageHeader from "@/partials/PageHeader.astro";
+// import PageHeader from "@/partials/PageHeader.astro";
 import type { Button, Feature } from "@/types";
 import type { CollectionEntry } from "astro:content";
 import { getEntry, render } from "astro:content";
 import { FaCheck } from "react-icons/fa";
-import type { ListFormat } from "typescript";
+// import type { ListFormat } from "typescript";
+import DynamicIcon from "@/helpers/DynamicIcon";
 
 interface Homepage {
   banner: {
@@ -69,6 +70,7 @@ const { banner, features } = homepage.data as Homepage;
                 rel="noopener"
               >
                 {banner.button.label}
+                <DynamicIcon className="inline-block" icon="FaArrowDown" />
               </a>
             )
           }
