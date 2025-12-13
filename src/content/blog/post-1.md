@@ -1,6 +1,6 @@
 ---
 title: "Pressemitteilung KiM"
-abstract: "Museen bewahren nicht nur wertvolle Objekte, sie sind auch Orte des Wissens. In diesem Blog Post geht es darum wie das Projekt KI in Museen die Museen von morgen gestalten kann"
+abstract: "Museen bewahren nicht nur wertvolle Objekte, sie sind auch Orte des Wissens. In diesem Artikel geht es darum wie das Projekt KI in Museen die Museen von morgen gestalten kann"
 meta_title: "KI in Museen"
 description: "this is meta description"
 date: 2025-09-16
