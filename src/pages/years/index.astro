@@ -10,8 +10,8 @@ const years = await getTaxonomy(BLOG_FOLDER, "years");
 const allyears = await getAllTaxonomy(BLOG_FOLDER, "years");
 ---
 
-<Base title={"Tags"}>
-  <PageHeader title={"Tags"} />
+<Base title={"Years"}>
+  <PageHeader title={"Years"} />
   <section class="section">
     <div class="container text-center">
       <ul>
@@ -21,7 +21,7 @@ const allyears = await getAllTaxonomy(BLOG_FOLDER, "years");
             return (
               <li class="m-3 inline-block">
                 <a
-                  href={`/year/${tag}`}
+                  href={`/years/${tag}`}
                   class="block rounded bg-light px-4 py-2 text-xl text-text-dark dark:bg-darkmode-light dark:text-darkmode-text-dark"
                 >
                   {humanize(tag)}{" "}

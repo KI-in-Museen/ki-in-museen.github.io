@@ -23,8 +23,8 @@ const { year } = Astro.params;
 // get posts by tag
 const BLOG_FOLDER = "blog";
 const posts = await getSinglePage(BLOG_FOLDER);
-const filterByTags = taxonomyFilter(posts, "years", year!);
-const sortedPosts = sortByDate(filterByTags);
+const filterByYears = taxonomyFilter(posts, "years", year!);
+const sortedPosts = sortByDate(filterByYears);
 ---
 
 <Base title={year}>
