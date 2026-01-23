@@ -16,7 +16,8 @@ features:
     content: "Oft stammen Exponate aus problematischen Kontexten, etwa aus der NS-Zeit oder aus kolonialen Zusammenhängen. KI wird in diesem Arbeitspaket dafür eingesetzt, große Datenmengen schneller zu sichten, Muster zu erkennen und Hinweise auf solche Fälle zu liefern. Gleichzeitig bleibt die Rolle der Fachwissenschaftler_innen unverzichtbar: Sie bewerten die Ergebnisse und stellen sicher, dass die KI-Anwendungen korrekt eingesetzt werden."
     bulletpoints:
       - "Stichwort 1"
-      - "Stichwort 2"
+      - "Stichwort 2" 
+      - "Stichwort 3"
     button:
       enable: false
       label: "Get Started Now"
