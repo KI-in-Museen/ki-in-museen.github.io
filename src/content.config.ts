@@ -10,6 +10,7 @@ const blogCollection = defineCollection({
     abstract: z.string().optional(),
     description: z.string().optional(),
     date: z.date().optional(),
+    external_link: z.string().optional(),
     image: z.string().optional(),
     author: z.string().default("Admin"),
     categories: z.array(z.string()).default(["others"]),
