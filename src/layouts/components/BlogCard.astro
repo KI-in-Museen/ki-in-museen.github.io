@@ -36,7 +36,12 @@ const {
     )
   }
   <h4 class="mb-3">
-    <a href={`/${blog_folder}/${data.id}`}>
+    <a
+      class="btn btn-outline-primary btn-sm"
+      href={external_link?.trim()
+        ? external_link
+        : `/${blog_folder}/${data.id}`}
+    >
       {title}
     </a>
   </h4>
