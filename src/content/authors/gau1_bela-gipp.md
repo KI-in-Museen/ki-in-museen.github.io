@@ -8,7 +8,7 @@ description: this is meta description
 social:
   - name: home
     icon: FaHouse
-    link: https://bela.gipp.com/
+    link: http://gipplab.uni-goettingen.de/b
   - name: email
     icon: FaEnvelope
     link: mailto:gipp@uni-goettingen.de
@@ -17,4 +17,4 @@ social:
     link: https://www.linkedin.com/in/bgipp
 ---
 
-Professor for Scientific Information Analytics at the University of Göttingen
+Professor für Scientific Information Analytics an der Universität Göttingen

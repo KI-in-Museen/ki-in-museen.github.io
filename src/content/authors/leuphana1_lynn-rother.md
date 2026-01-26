@@ -17,4 +17,4 @@ social:
     link: https://www.linkedin.com/in/lynn-rother-133a977a
 ---
 
-Full Professor for Provenance Studies
+Professor for Provenance Studies

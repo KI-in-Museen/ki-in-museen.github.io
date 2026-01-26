@@ -45,12 +45,13 @@ features:
         logo: ""
         link: "team#tib"
 
-  - title: "Anreicherung von Metadaten"
+  - title: "KI-gestützte Metadatenanreicherung"
     image: "/images/service-3.png"
-    content: " In einer Pilotphase konzentrieren sich die Forschenden auf antike Skulpturen. Texte aus der Archäologie und historische Grabungsberichte werden automatisch ausgewertet, sodass die Objekte zusätzliche Informationen erhalten, beispielsweise über Fundorte oder historische Bezüge. Diese Daten werden anschließend in digitale Systeme eingespeist und sind damit leichter nutzbar"
+    content: "Viele Objektinformationen in musealen Sammlungen liegen bislang unvollständig oder verteilt über unterschiedliche Textquellen vor. Mithilfe KI-gestützter Verfahren der Sprachverarbeitung werden relevante Informationen aus wissenschaftlichen Publikationen, Grabungsdokumentationen, Sammlungsverzeichnissen und Datenbanken automatisch erkannt, extrahiert und zur Vervollständigung bestehender Objektmetadaten genutzt. Die angereicherten Metadaten werden semantisch mit ihren Quellen verknüpft und in einem vernetzten Datenraum zusammengeführt. Dadurch wird die Qualität, Durchsuchbarkeit und Nachnutzbarkeit musealer Sammlungsdaten verbessert."
     bulletpoints:
-      - "Stichwort 1"
-      - "Stichwort 2"
+      - Automatische Extraktion und semantische Anreicherung von Objektmetadaten
+      - KI-gestützte Analyse objektbezogener Textquellen
+      - Vernetzung, Austausch und Nachnutzung angereicherter Sammlungsdaten"
     button:
       enable: false
       label: ""
@@ -91,5 +92,5 @@ Das Forschungsprojekt gliedert sich in vier Arbeitspakete, die jeweils unterschi
 
 1. [**Provenienzforschung**](#provenienzforschung)
 2. [**Digitale Erschließung**](#digitale-erschließung)
-3. [**Anreicherung von Metadaten**](#anreicherung-von-metadaten)
+3. [**Anreicherung von Metadaten**](#ki-gestützte-metadatenanreicherung)
 4. [**Betriebsmodelle für die Praxis**](#betriebsmodelle-für-die-praxis)
