@@ -20,7 +20,13 @@ const { footer }: { footer: { name: string; url: string }[] } = menu;
           {
             footer.map((menu) => (
               <li class="m-3 inline-block">
-                <a href={menu.url}>{menu.name}</a>
+                <a
+                  href={menu.url}
+                  target={menu.url.startsWith("http") ? "_blank" : undefined}
+                  rel={menu.url.startsWith("http") ? "noopener noreferrer" : undefined}
+                >
+                  {menu.name}
+                </a>
               </li>
             ))
           }

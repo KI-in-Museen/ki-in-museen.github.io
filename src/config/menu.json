@@ -15,8 +15,12 @@
   ],
   "footer": [
     {
-      "name": "Privacy Policy",
-      "url": "/privacy-policy"
+      "name": "Datenschutz",
+      "url": "/datenschutz"
+    },
+    {
+      "name": "Impressum",
+      "url": "https://www.jade-hs.de/impressum/"
     }
   ]
 }
